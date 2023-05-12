@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->mediumInteger('Codice_Treno')->unsigned()->after('Cancellato');
-            $table->tinyInteger('Numero_Carrozze')->nullable()->unsigned()->after('Cancellato');
+            $table->unsignedSmallInteger('Codice_treno');
         });
     }
 
