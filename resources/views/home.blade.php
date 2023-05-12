@@ -16,11 +16,11 @@
             @foreach($trains as $train)
                 <div class="col">
                     <div class="card" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">{{ $train->Azienda }}</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title">N°Treno - {{ $train->Codice_treno }} - {{ $train->Azienda }}</h5>
+                          <br>
+                          <h6 class="card-title">In partenza il: {{ $train->Orario_di_partenza }} da {{ $train->Stazione_di_partenza }}</h6>
+                          <h6 class="card-title">Con destinazione il: {{ $train->Orario_di_arrivo }} a {{ $train->Stazione_di_arrivo }}</h6>
                         </div>
                       </div>
                     
